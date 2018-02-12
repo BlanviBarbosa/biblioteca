@@ -1,4 +1,4 @@
-<?
+<?php
 /**
 * 
 */
@@ -6,19 +6,22 @@ class Pessoa
 {
 	public $nome;
 	public $idade;
+
+	public function __construct($nome, $idade)
+	{
+		$this->nome  = $nome;
+		$this->idade = $idade;
+	}
+
+	public function correr($km)
+	{
+		echo $this->nome." está correndo! </br>";
+		for ($i=0; $km > $i ; $i++) 
+		{ 
+			echo ".";
+		}
+		echo " </br>".$this->nome."Terminou de correr!";
+	}
 }
-
-
-$pessoa1 = new Pessoa();
-$pessoa1->nome 	= "TalMarcia";
-$pessoa1->idade = 30;
-
-
-$pessoa2 =	new Pessoa();
-$pessoa2->nome 	= "Maria";
-$pessoa2->idade = 20;
-
-
-echo $pessoa1->nome;
 
 ?>
