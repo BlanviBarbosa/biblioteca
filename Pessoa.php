@@ -10,7 +10,7 @@ class Pessoa
 
 
 $pessoa1 = new Pessoa();
-$pessoa1->nome 	= "Marcia";
+$pessoa1->nome 	= "TalMarcia";
 $pessoa1->idade = 30;
 
 
