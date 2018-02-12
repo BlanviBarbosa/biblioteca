@@ -16,6 +16,7 @@ class Pessoa
 	public function correr($km)
 	{
 		echo $this->nome." está correndo! </br>";
+		
 		for ($i=0; $km > $i ; $i++) 
 		{ 
 			echo ".";
