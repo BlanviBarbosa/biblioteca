@@ -1,22 +1,29 @@
 <?php
 
-require_once "Pessoa.php";
-require_once "Produto.php";
-require_once "Tenis.php";
+require_once('autoload.php');
 
-//$pessoa1 = new Pessoa("Marcia", 20);
-//$pessoa2 =	new Pessoa("Maria", 19);
-
-//echo $pessoa1->correr(50);
+$contaType = new BBS\Conta\Types\ContaType();
+$contaType->depositar(10);
+echo $contaType->getSaldo();
 
 
-$tenis = new TenisAdidas();
-$tenis->getCor();
+$bancoSantander = new BBS\Banco\Santander();
+$bancoSantander->setConta($conta);
+$bancoSantander->setNome("Santander Exemplo");
 
-$tenis2 = new SapaTenis();
-$tenis2->getCor();
-$tenis2->getTamanho();
+$bancoSantander->getConta()->getSaldo(); 
+
+/*
+require_once "ProcessoTrait.php";
+require_once "ContaAbstract.php";
+require_once "Conta.php";
+require_once "ContaPremium.php";
+
+$conta = new ContaPremium();
+$conta->depositar(100);
+$conta->sacar(50);
 
 
-
+echo $conta->getSaldo();
+*/
 ?>
