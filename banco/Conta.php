@@ -4,11 +4,11 @@
 */
 class Conta 
 {
-	private $saldo;
+	protected $saldo;
 
 	public function depositar($valor)
 	{
-		$this->saldo += $valor;
+		$this->saldo += $this->calculoDeposito($valor);
 		return true;
 	}
 	
@@ -25,6 +25,11 @@ class Conta
 	public function getSaldo()
 	{
 		return $this->saldo;
+	}
+
+	protected function calculoDeposito($valor)
+	{
+		return $valor += 10;
 	}
 }
 

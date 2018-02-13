@@ -1,8 +1,9 @@
 <?php
 
 require_once "Conta.php";
+require_once "ContaPremium.php";
 
-$conta = new Conta();
+$conta = new ContaPremium();
 $conta->depositar(100);
 $conta->sacar(50);
 
